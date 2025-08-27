@@ -3,15 +3,18 @@ import Image from "next/image";
 const NavBar = () => {
   return (
     <nav className="flex items-center justify-between p-4 shadow-md border-b border-gray-200">
-        {/* left */}
-        <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="Logo" width={50} height={50} className="w-6 h-6 md:w-9 md:h-9" />
-          <p className="hidden md:block tracking-wider">Ecommerce app</p>
-        </Link>
-        {/* right */}
-        <div>
-          right
-        </div>
+      <div className="flex items-center space-x-4">
+        <Image src="/logo.png" alt="Logo" width={40} height={40} />
+        <span className=" sm:block text-xl font-bold">Aryan's Portfolio</span>
+      </div>
+      <div className="space-x-4">
+        <Link href="/" className="text-gray-700 hover:text-gray-900">Home</Link>
+        <Link href="/about" className="text-gray-700 hover:text-gray-900">About</Link>
+        <Link href="/services" className="text-gray-700 hover:text-gray-900">Services</Link>
+        <Link href="/projects" className="text-gray-700 hover:text-gray-900">Projects</Link>
+        <Link href="/contact" className="text-gray-700 hover:text-gray-900">Contact</Link>
+      </div>
+      
     </nav>
   )
 }
